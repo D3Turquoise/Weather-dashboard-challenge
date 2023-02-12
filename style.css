@@ -1,0 +1,17 @@
+/* * {
+    outline: red 1px solid;
+} */
+
+main {
+    display: flex !important;
+    flex-direction:  row !important;
+}
+
+
+.card {
+    flex: 1
+}
+
+.weather-icon {
+    width: 40px;
+}
