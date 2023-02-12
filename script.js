@@ -39,18 +39,6 @@ $('#search-form').on('submit', function(event) {
 
                     console.log(weathers)
 
-                    // <div class="card">
-                        // <div class="card-header">
-                        //   <h4>Date</h4>
-                        //   <img class ="weather-icon" src="https://via.placeholder.com/150"/>
-                        // </div>
-                        // <ul class="list-group list-group-flush">
-                        //      <li class="list-group-item">Temp: </li>
-                        //      <li class="list-group-item">Wind: </li>
-                        //      <li class="list-group-item">Humidity: </li>
-                        // </ul>
-                    // </div>
-
                     for(i = 0; i < weathers.length; i++) {
                         const cardDiv = $("<div class='card'>")
                         cardDiv.html(`
@@ -70,11 +58,6 @@ $('#search-form').on('submit', function(event) {
 
 
 
-                    // weathers[0] will be today's weather
-                    // weathers[1 - 4] will be 5 days forecast
-                    // TODO: put today's weather in container for today's weather
-                    // TODO: put 5 day's forecast weather in container for the 5 day forecast
-                    // Icon URL http://openweathermap.org/img/w/" + iconcode + ".png"
                 });
         });
 });
