@@ -8,7 +8,7 @@ $('#search-form').on('submit', function(event) {
     event.preventDefault();
 
     const userInput = $('#search-input').val();
-    const queryUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + userInput + '&limit=5&appid=' + apiKey;
+    const queryUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + userInput + '&limit=5&appid=' + apiKey;
     // TODO: put the search value on the history list container
 
     // Add the history to local storage
@@ -21,7 +21,7 @@ $('#search-form').on('submit', function(event) {
             const lat = response[0].lat;
             const lon = response[0].lon;
 
-            const weatherQueryUrl = 'http://api.openweathermap.org/data/2.5/forecast?units=metric&lat=' + lat + '&lon=' + lon + '&appid=' + apiKey;
+            const weatherQueryUrl = 'https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=' + lat + '&lon=' + lon + '&appid=' + apiKey;
 
             // Call 5 day weather forecast API after we have city lat and lon value
             $.ajax({ url: weatherQueryUrl })
@@ -44,7 +44,7 @@ $('#search-form').on('submit', function(event) {
                         cardDiv.html(`
                                     <div class="card-header">
                                     <h4>${moment(weathers[i].dt*1000).format("DD/MM/YYYY")}</h4>
-                                    <img class ="weather-icon" src=" http://openweathermap.org/img/wn/${weathers[i].weather[0].icon}@2x.png"/>
+                                    <img class ="weather-icon" src=" https://openweathermap.org/img/wn/${weathers[i].weather[0].icon}@2x.png"/>
                                 </div>
                                 <ul class="list-group list-group-flush">
                                     <li class="list-group-item">Temp: ${weathers[i].main.temp}</li>
